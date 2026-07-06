@@ -11,6 +11,13 @@ The framework decouples surgical workflow analysis into two stages:
 
 ---
 
+### 3. Model Weights Setup
+
+Before running the pipeline, you must ensure the tracking and segmentation weights are placed in your working directory:
+
+1. **YOLOv8 Weights:** Place your fine-tuned tool detection checkpoint (referenced as `weights.pt` in the script configuration) into your local folder.
+2. **SAM 2.1 Weights:** The base model checkpoint (`sam2.1_b.pt`) will automatically download via the `ultralytics` framework upon your first execution. If running offline, manually download `sam2.1_b.pt` from the Ultralytics asset repository and place it in the project root directory.
+
 ## Installation
 
 To replicate this environment and run the extraction pipeline, execute the following command from the root directory to fetch the missing FlowFormer++ dependencies:
